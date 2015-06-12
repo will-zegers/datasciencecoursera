@@ -2,7 +2,7 @@
 
 <p>The following is taken from the original README from the UCI data set:</p>
 
-> <p>==================================================================
+> ==================================================================
 > 
 > Human Activity Recognition Using Smartphones Dataset
 > 
@@ -48,7 +48,7 @@
 > 
 > - Its activity label. 
 > 
-> - An identifier of the subject who carried out the experiment.i</p>
+> - An identifier of the subject who carried out the experiment.
 
 <p>The variables contained in this data set are the calculated average mean and standard deviations on Subject-Activity pairs, consisting of 128 observation each. Note this does not include meanFreq measurements seen in frequency domain variables, as these were interpreted to be separate measurements. Furthermore, only variables consisting of *measurements* were considered relevant to this data set and not variables representing means as a result of calculations on these variables (e.g., gravityMean, tBodyAccMean).</p>
 
