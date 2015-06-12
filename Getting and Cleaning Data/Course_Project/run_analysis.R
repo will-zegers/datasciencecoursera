@@ -2,12 +2,12 @@ library(dplyr)
 
 if(!file.exists("./data")){dir.create("./data")}
 
-fileUrl  <- 'https://d396qusza40orc.clouHARUSdataront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+fileUrl  <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
 destFile <- './data/dataset.zip'
 
 if(!file.exists(destFile)) {
     print('[+] Downloading file...')
-    if (download.file(fileUrl, destFile, method='curl', quiet=T) != 0)
+    if (download.file(fileUrl, destFile, method='curl') != 0)
         stop('[-] Problem downloading file')
 }
 
