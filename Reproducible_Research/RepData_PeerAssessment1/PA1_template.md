@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -50,16 +55,16 @@ Action.Data[sample(1:nrow(Action.Data),10),]
 
 ```
 ##       steps       date interval
-## 9201     NA 2012-11-01     2240
-## 1089     59 2012-10-04     1840
-## 3452      0 2012-10-12     2335
-## 2994      0 2012-10-11     0925
-## 923       0 2012-10-04     0450
-## 13327     0 2012-11-16     0630
-## 16010     0 2012-11-25     1405
-## 3608      0 2012-10-13     1235
-## 1970      0 2012-10-07     2005
-## 11918     0 2012-11-11     0905
+## 17207     0 2012-11-29     1750
+## 17457    NA 2012-11-30     1440
+## 14534     0 2012-11-20     1105
+## 3408      0 2012-10-12     1955
+## 17236     0 2012-11-29     2015
+## 444       0 2012-10-02     1255
+## 17078     0 2012-11-29     0705
+## 16223     0 2012-11-26     0750
+## 5956      0 2012-10-21     1615
+## 4330      0 2012-10-16     0045
 ```
 ***
 
@@ -100,7 +105,7 @@ ggplot(stepsByDate, aes(date,steps)) +
   )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 </br>
 Finally, while we're at it, we can use our aggregated data to compute the mean
@@ -164,7 +169,8 @@ ggplot(Interval.Stats, aes(strptime(Interval.Stats$Interval, format="%H%M"),Avg.
   scale_x_datetime(labels=function(x) format(x,"%R"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
+
 <br/>
 Looks like there's a clear spike at sometime around 8:00. We'll use
 the *max* function to identify when exactly this occurs:
@@ -273,7 +279,7 @@ ggplot(stepsByDate, aes(date,steps)) +
   )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png) 
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png) 
 
 Notice that the days that had a lot of NA values (e.g., October 1) tend to go
 up considerably than days with few or no missing values. Let's take a look and
@@ -382,4 +388,4 @@ ggplot(Interval.Stats.New, aes(strptime(Interval.Stats.New$interval,format='%H%M
   scale_x_datetime(labels=function(x) format(x,"%R"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-20-1.png) 
+![plot of chunk unnamed-chunk-20](figure/unnamed-chunk-20-1.png) 
