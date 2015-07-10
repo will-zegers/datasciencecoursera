@@ -200,7 +200,7 @@ sum(is.na(Action.Data$steps))
 To fill these missing spaces, we'll generate random numbers based on the mean
 and standard deviation of steps for the interval in which the NA exists. (This
 is admittedly sort of overkill and was a personal choice, just to try something 
-slightly more challenging.)
+slightly more challenging. Statistically, I feel it's valid.)
 
 <br/>
 First thing will be to add an extra column to *Interval.Stats* that will contain
